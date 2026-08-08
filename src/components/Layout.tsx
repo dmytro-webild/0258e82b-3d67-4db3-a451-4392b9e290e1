@@ -9,15 +9,15 @@ export default function Layout() {
   const navItems = [
   {
     "name": "Services",
-    "href": "#features"
+    "href": "#services"
   },
   {
     "name": "Residential",
-    "href": "#services"
+    "href": "#features"
   },
   {
     "name": "Commercial",
-    "href": "#services"
+    "href": "#features"
   },
   {
     "name": "Maintenance",
@@ -26,14 +26,6 @@ export default function Layout() {
   {
     "name": "About",
     "href": "#about"
-  },
-  {
-    "name": "Hero",
-    "href": "#hero"
-  },
-  {
-    "name": "Metrics",
-    "href": "#metrics"
   }
 ];
 
