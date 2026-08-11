@@ -28,9 +28,52 @@ const ContactInline = () => {
                 className="md:max-w-8/10 text-5xl 2xl:text-6xl leading-[1.15] font-semibold text-center text-balance"
               />
 
-              <div className="flex flex-wrap justify-center gap-3 mt-2 md:mt-3">
-                <Button text={primaryButton.text} href={primaryButton.href} variant="primary" />
-              </div>
+              <form className="w-full max-w-lg flex flex-col gap-4 mt-6 text-left" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-xs font-medium text-accent">Name</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Your Name"
+                      className="w-full px-4 py-2.5 rounded bg-background border border-accent/20 text-foreground focus:outline-none focus:border-foreground/50 text-sm"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <label className="text-xs font-medium text-accent">Phone Number</label>
+                    <input
+                      type="tel"
+                      required
+                      placeholder="(555) 000-0000"
+                      className="w-full px-4 py-2.5 rounded bg-background border border-accent/20 text-foreground focus:outline-none focus:border-foreground/50 text-sm"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-medium text-accent">City</label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Your City"
+                    className="w-full px-4 py-2.5 rounded bg-background border border-accent/20 text-foreground focus:outline-none focus:border-foreground/50 text-sm"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-xs font-medium text-accent">What's wrong?</label>
+                  <textarea
+                    required
+                    rows={4}
+                    placeholder="Describe the issue with your HVAC system..."
+                    className="w-full px-4 py-2.5 rounded bg-background border border-accent/20 text-foreground focus:outline-none focus:border-foreground/50 text-sm resize-none"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="mt-2 w-full primary-button py-3 px-6 rounded font-medium transition cursor-pointer text-center"
+                >
+                  Call for Estimate
+                </button>
+              </form>
             </div>
           </div>
         </ScrollReveal>
